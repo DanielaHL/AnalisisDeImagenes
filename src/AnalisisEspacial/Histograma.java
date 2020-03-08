@@ -49,6 +49,7 @@ public class Histograma {
             this.hGrises[prom]++;    
             }
         }
+        calcularMinimosYMaximos();
     }
     
     public void graficarHistogramas(){
@@ -100,7 +101,7 @@ public class Histograma {
         graph.muestraGrafica();
     }
     
-    private void calcularMinimosYMaximos(){
+     private void calcularMinimosYMaximos(){
     this.minR = -1;
     this.minG = -1;
     this.minB = -1;
@@ -115,9 +116,9 @@ public class Histograma {
         if(hRojo[t2]!=0 && maxR==256){
             maxR = t2;
         }
-       
-    }
 
+    }
+    
     for(int t1 = 0, t2= hVerde.length-1; minG==-1 || maxG==256 ;t1++,t2--){
         if(hVerde[t1]!=0 && minG ==-1){
             minG = t1;
@@ -125,7 +126,7 @@ public class Histograma {
         if(hVerde[t2]!=0 && maxG==256){
             maxG = t2;
         }
-       
+
     }
 
     for(int t1 = 0, t2= hAzul.length-1; minB==-1 || maxB==256 ;t1++,t2--){
@@ -135,12 +136,13 @@ public class Histograma {
         if(hAzul[t2]!=0 && maxB==256){
             maxB = t2;
         }
-       
+
     }
-    
-   System.out.println();
+
+  System.out.println();
+
  }
-  
+
     public double[] getHRed(){
         return this.hRojo;
     }
@@ -156,8 +158,8 @@ public class Histograma {
     public int getMaxR(){
         return this.maxR;
     }
-
-    public int getMinG(){
+    
+     public int getMinG(){
         return this.minG;
     }
     public int getMaxG(){
@@ -170,6 +172,8 @@ public class Histograma {
     public int getMaxB(){
         return this.maxB;
     }
+    
+ 
   //Tono minimo y maximo en la imagen
   //Expansion logaritmica
   //Expansion exponencial  

@@ -106,7 +106,53 @@ public class Main {
         Histograma h1 = new  Histograma(contraste);
         h1.graficarHistogramas();  
        */
+        
+     
+    /*
+     //Expansion logaritmica
         Image imagen = AbrirImagen.openImage();
+        Histograma h = new  Histograma(imagen);
+        h.graficarHistogramas();
+        JFrameImagen fi = new JFrameImagen(imagen);
+        Image log = FiltrosEspaciales.expansionLogaritmica(imagen,5);
+        JFrameImagen fic = new JFrameImagen(log);
+        Histograma h1 = new  Histograma(log);
+        h1.graficarHistogramas();
+    */ 
+    /*
+    //Expansion Exponencial
+        Image imagen = AbrirImagen.openImage();
+        Histograma h = new  Histograma(imagen);
+        h.graficarHistogramas();
+        JFrameImagen fi = new JFrameImagen(imagen);
+        Image exp = FiltrosEspaciales.expansionExponencial(imagen,0.1);
+        JFrameImagen fic = new JFrameImagen(exp);
+        Histograma h1 = new  Histograma(exp);
+        h1.graficarHistogramas();
+   */
+     ///*
+     // Expansion lineal
+//         Image imagen = AbrirImagen.openImage();
+//        Histograma h = new  Histograma(imagen);
+//        h.graficarHistogramas();
+//        JFrameImagen fi = new JFrameImagen(imagen);
+//        Image contraste = FiltrosEspaciales.expansionLineal(h, imagen);
+//        JFrameImagen fic = new JFrameImagen(contraste);
+//        Histograma h1 = new  Histograma(contraste);
+//        h1.graficarHistogramas();
+     //*/
+     
+     //Expansion
+//        Image imagen = AbrirImagen.openImage();
+//        Histograma h = new  Histograma(imagen);
+//        h.graficarHistogramas();
+//        JFrameImagen fi = new JFrameImagen(imagen);
+//        Image contraste = FiltrosEspaciales.expansionDanis(5, 30, imagen);
+//        JFrameImagen fic = new JFrameImagen(contraste);
+//        Histograma h1 = new  Histograma(contraste);
+//        h1.graficarHistogramas();
+        //Binarizacion
+     /*Image imagen = AbrirImagen.openImage();
         Histograma h = new  Histograma(imagen);
         h.graficarHistogramas();
         JFrameImagen fi = new JFrameImagen(imagen);
@@ -114,7 +160,33 @@ public class Main {
         JFrameImagen fic = new JFrameImagen(binarizacion);
         Histograma h1 = new  Histograma(binarizacion);
         h1.graficarHistogramas();  
-     
-        System.out.println();
+     */
+        /*  
+     //Binarizacion automatica
+        Image imagen = AbrirImagen.openImage();
+        Histograma h = new  Histograma(imagen);
+        h.graficarHistogramas();
+        JFrameImagen fi = new JFrameImagen(imagen);
+        
+        Image ig = FiltrosEspaciales.generarImagenGrises(imagen);
+        JFrameImagen fic = new JFrameImagen(ig);
+        Histograma hGrises = new  Histograma(ig);
+        hGrises.graficarHistogramas();
+        
+        double his[]=hGrises.getHBlue();
+        
+       // Image ip = FiltrosEspaciales.metodoIterativo(his);
+        
+        */
+        
+//             Image imagen = AbrirImagen.openImage();
+//        Histograma h = new  Histograma(imagen);
+//        h.graficarHistogramas();
+//        JFrameImagen fi = new JFrameImagen(imagen);
+//        Image contraste = FiltrosEspaciales.iluminarImagen(imagen, -150);
+//        JFrameImagen fic = new JFrameImagen(contraste);
+//        Histograma h1 = new  Histograma(contraste);
+//        h1.graficarHistogramas();
+
     }
 }
