@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 package AnalisisDeImagenes;
+import AnalisisEspacial.Convolucion;
 import AnalisisEspacial.FiltrosEspaciales;
 import AnalisisEspacial.Graficar;
 import AnalisisEspacial.Histograma;
+//import AnalisisEspacial.Suavizado;
 import gui.JFrameImagen;
 import gui.JFrameSegmentacion;
 import open.AbrirImagen;
@@ -188,5 +190,18 @@ public class Main {
 //        Histograma h1 = new  Histograma(contraste);
 //        h1.graficarHistogramas();
 
-    }
+    
+    //Convolucion
+    Image imagen = AbrirImagen.openImage();
+        JFrameImagen frame = new JFrameImagen(imagen);
+        Histograma ho = new Histograma(imagen);
+        ho.graficarHistogramas();
+    
+        int[][] mascara = new int[][]{{-2,-1,0},{-1,1,1},{0,1,2}};
+        Image imagenSuavizada = Convolucion.aplicarConvolucion(imagen, mascara, 1, 0);
+               
+        JFrameImagen frame3 = new JFrameImagen(imagenSuavizada);
+        Histograma his = new Histograma(imagenSuavizada);
+        his.graficarHistogramas();
+      }
 }
