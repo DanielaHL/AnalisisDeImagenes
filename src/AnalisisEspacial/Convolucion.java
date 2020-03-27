@@ -45,8 +45,8 @@ public class Convolucion {
                         int rgb = bi.getRGB(r, c);
                         color = new Color(rgb);
                         auxR+= color.getRed()*mascara[i][j];
-                        auxG+= color.getGreen()*mascara[i][i];
-                        auxB+= color.getBlue()*mascara[i][i];
+                        auxG+= color.getGreen()*mascara[i][j];
+                        auxB+= color.getBlue()*mascara[i][j];
                         
                     } catch (Exception e) {
                         // nada de nada 
